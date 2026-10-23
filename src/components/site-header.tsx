@@ -26,7 +26,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2 sm:px-8">
         <a href="#top" className="shrink-0 rounded-md" onClick={close}>
           <Image
-            src="/workshop-logo.jpg"
+            src="workshop-logo.jpg"
             alt={workshopName}
             width={672}
             height={440}

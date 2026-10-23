@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: workshopName,
   description:
     "מפגשים קטנים לשיחה, הקשבה ויצירה. מקום שקט שבו חוכמה נעשית בידיים.",
-  icons: { icon: "/workshop-logo.jpg" },
+  icons: { icon: "workshop-logo.jpg" },
 };
 
 export default function RootLayout({
