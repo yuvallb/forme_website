@@ -4,23 +4,26 @@ Hebrew, right-to-left marketing site for הסדנא החכמה, a small wisdom w
 
 The wordmark uses the spelling הסדנא החכמה. The logo file is `public/workshop-logo.jpg`.
 
-## Run locally
+## Build the static site
 
 Requires Node.js 20.9 or newer.
 
 ```bash
 npm install
-npm run dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+`next build` writes HTML, CSS, and JavaScript into `out/`. The production site is those files. It does not run a Node server, and there are no API routes or server actions.
 
-## Production build
+## Open the files without a server
+
+Open `out/index.html` in a browser:
 
 ```bash
-npm run build
-npm start
+xdg-open out/index.html
 ```
+
+On macOS use `open out/index.html`. On Windows, double-click `out/index.html`.
 
 The contact form does not send mail and does not use a database. Submitting it shows a success state on the page only.
 

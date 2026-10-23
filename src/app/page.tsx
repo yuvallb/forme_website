@@ -106,7 +106,7 @@ export default function Home() {
           </div>
           <div className="order-1 md:order-2">
             <Image
-              src="/workshop-logo.jpg"
+              src="workshop-logo.jpg"
               alt={workshopName}
               width={672}
               height={440}
