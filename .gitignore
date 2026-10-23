@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/ is the static site and is committed.
 
 # production
 /build
