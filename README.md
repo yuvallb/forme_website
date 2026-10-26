@@ -25,7 +25,7 @@ xdg-open out/index.html
 
 On macOS use `open out/index.html`. On Windows, double-click `out/index.html`.
 
-The contact form does not send mail and does not use a database. Submitting it shows a success state on the page only.
+The contact form posts to Formspree (`https://formspree.io/f/xzeeejeo`) from the browser and stays on the page. A successful send shows a thank-you. A failed send shows an error and keeps the fields filled in.
 
 Google Analytics 4 measurement ID `G-2P2V41DZSX` loads on every page from the root layout.
 

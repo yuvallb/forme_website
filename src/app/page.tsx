@@ -249,36 +249,57 @@ export default function Home() {
         </section>
 
         <section className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
-          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-            <div className="space-y-4">
-              <p className="text-sm font-medium text-gold">איך זה התחיל</p>
-              <h2 className="text-4xl text-primary">מהתנסות, להתגלות, למודל</h2>
-              <p className="text-lg leading-8 text-foreground/85">
-                כאחות אונקולוגית פגשתי מטופלים בשלבים שונים של ההתמודדות. בלטו
-                החשש להכביד על המשפחה, והצורך לפגוש אנשים בהתמודדות דומה. יחד
-                עם עו״ס מצוות בית החולים הקמתי קבוצת תמיכה למטופלים עם סרטן
-                המוח. היה צורך אמיתי במפגש, וגם קושי לשתף ולהיחשף לקשיים של
-                אחרים. בסופו של דבר השהיתי את המפגשים.
-              </p>
-              <p className="text-lg leading-8 text-foreground/85">
-                שנה לאחר מכן השתתפתי בקורס סטנדאפ. חברי הקבוצה כתבו וסיפרו
-                סיפורים אישיים, מורכבים ולא פעם כואבים, והתגובה הייתה חיבוק,
-                חום, צחוק וקבלה. שם התחברו הנקודות: מה אם נקיים קבוצת סטנדאפ
-                למתמודדים אונקולוגיים? המודל לוקח את הטוב משני העולמות, הליווי
-                הנפשי והסטנדאפ, בסדנה משולבת שמנחים מטפל רגשי וסטנדאפיסט.
-              </p>
-              <p className="text-base leading-7 text-foreground/75">
-                ליטל ליברמן אביטל
-              </p>
+          <div className="mx-auto max-w-6xl space-y-8">
+            <h2 className="text-4xl text-primary">איך התחלנו</h2>
+            <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start lg:col-span-2">
+                <Image
+                  src="lital-liberman-avital.jpg"
+                  alt="ד״ר ליטל ליברמן אביטל"
+                  width={1372}
+                  height={2048}
+                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_18%] sm:max-w-none"
+                />
+                <div className="space-y-4">
+                  <figcaption className="font-heading text-2xl text-primary">
+                    ד״ר ליטל ליברמן אביטל
+                  </figcaption>
+                  <blockquote className="space-y-4 text-base leading-7 text-foreground/85">
+                    <p>
+                      כאחות אונקולוגית פגשתי מטופלים בשלבים שונים של ההתמודדות.
+                      בלטו החשש להכביד על המשפחה, והצורך לפגוש אנשים בהתמודדות
+                      דומה. יחד עם עו״ס מצוות בית החולים הקמתי קבוצת תמיכה
+                      למטופלים עם סרטן המוח. היה צורך אמיתי במפגש, וגם קושי לשתף
+                      ולהיחשף לקשיים של אחרים. בסופו של דבר השהיתי את המפגשים.
+                    </p>
+                    <p>
+                      שנה לאחר מכן השתתפתי בקורס סטנדאפ. חברי הקבוצה כתבו וסיפרו
+                      סיפורים אישיים, מורכבים ולא פעם כואבים, והתגובה הייתה חיבוק,
+                      חום, צחוק וקבלה. שם התחברו הנקודות: מה אם נקיים קבוצת
+                      סטנדאפ למתמודדים אונקולוגיים? המודל לוקח את הטוב משני
+                      העולמות, הליווי הנפשי והסטנדאפ, בסדנה משולבת שמנחים מטפל
+                      רגשי וסטנדאפיסט.
+                    </p>
+                  </blockquote>
+                </div>
+              </figure>
+              <figure className="rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm">
+                <figcaption className="mb-4 font-heading text-2xl text-primary">
+                  יונתן ביגן
+                </figcaption>
+                <blockquote className="text-base leading-7 text-foreground">
+                  {foundersTestimony}
+                </blockquote>
+              </figure>
+              <figure className="rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm">
+                <figcaption className="mb-4 font-heading text-2xl text-primary">
+                  אלדד שטרית
+                </figcaption>
+                <p className="text-base leading-7 text-foreground/55">
+                  העדות תתווסף כאן.
+                </p>
+              </figure>
             </div>
-            <figure className="rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:p-8">
-              <figcaption className="mb-4 text-sm font-medium text-gold">
-                עדות המייסדים
-              </figcaption>
-              <blockquote className="text-lg leading-8 text-foreground">
-                {foundersTestimony}
-              </blockquote>
-            </figure>
           </div>
         </section>
 
