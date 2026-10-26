@@ -4,13 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { workshopName } from "@/lib/brand";
+import { ventureName } from "@/lib/brand";
 import { cn } from "cn";
 
 const links = [
-  { href: "#about", label: "אודות" },
-  { href: "#offerings", label: "מה בסדנא" },
-  { href: "#visit", label: "איך נראה ביקור" },
+  { href: "#about", label: "הסדנה" },
+  { href: "#founders", label: "המייסדים" },
+  { href: "#meetings", label: "המפגשים" },
+  { href: "#partners", label: "שותפות" },
   { href: "#contact", label: "יצירת קשר" },
 ];
 
@@ -27,14 +28,14 @@ export function SiteHeader() {
         <a href="#top" className="shrink-0 rounded-md" onClick={close}>
           <Image
             src="workshop-logo.jpg"
-            alt={workshopName}
+            alt={ventureName}
             width={672}
             height={440}
             priority
             className="h-16 w-auto sm:h-[4.75rem]"
           />
         </a>
-        <nav className="hidden items-center gap-7 md:flex" aria-label="ניווט ראשי">
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="ניווט ראשי">
           {links.map((link) => (
             <a
               key={link.href}
@@ -48,14 +49,14 @@ export function SiteHeader() {
             href="#contact"
             className={cn(buttonVariants({ size: "lg" }), "h-10 rounded-full px-4")}
           >
-            לתיאום מפגש
+            לשותפות
           </a>
         </nav>
         <Button
           type="button"
           variant="outline"
           size="icon"
-          className="size-11 rounded-full bg-card md:hidden"
+          className="size-11 rounded-full bg-card lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -68,7 +69,7 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="ניווט במובייל"
-          className="border-t border-border bg-card px-4 py-3 md:hidden"
+          className="border-t border-border bg-card px-4 py-3 lg:hidden"
         >
           <ul className="flex flex-col">
             {links.map((link) => (
@@ -91,7 +92,7 @@ export function SiteHeader() {
               "mt-2 h-12 w-full rounded-full text-base",
             )}
           >
-            לתיאום מפגש
+            לשותפות
           </a>
         </nav>
       ) : null}
