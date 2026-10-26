@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ventureName } from "@/lib/brand";
 
+const formspreeEndpoint = "https://formspree.io/f/xzeeejeo";
+
 type FieldName = "name" | "email" | "message";
 
 const emptyErrors: Record<FieldName, string> = {
@@ -19,11 +21,14 @@ const emptyErrors: Record<FieldName, string> = {
 export function ContactForm() {
   const [formKey, setFormKey] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [errors, setErrors] = useState(emptyErrors);
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
@@ -44,7 +49,28 @@ export function ContactForm() {
       return;
     }
 
-    setSubmitted(true);
+    data.set("name", name);
+    data.set("email", email);
+    data.set("message", message);
+
+    setSubmitError("");
+    setSubmitting(true);
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) {
+        setSubmitError("השליחה לא הצליחה. נסו שוב בעוד רגע.");
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setSubmitError("השליחה לא הצליחה. נסו שוב בעוד רגע.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -59,8 +85,7 @@ export function ContactForm() {
         <div className="space-y-2">
           <h3 className="text-2xl text-foreground">הפנייה נקלטה</h3>
           <p className="text-base leading-7 text-foreground/80">
-            תודה שכתבתם ל{ventureName}. הפרטים נשארו כאן במסך, בלי שליחה לשרת.
-            כשתחברו את הטופס לתיבת הדואר, המבקרים יראו את האישור הזה אחרי הפנייה.
+            תודה שכתבתם ל{ventureName}. הפנייה נשלחה בדוא״ל אל הסדנה.
           </p>
         </div>
         <Button
@@ -69,6 +94,7 @@ export function ContactForm() {
           className="h-11 rounded-full bg-card px-5"
           onClick={() => {
             setSubmitted(false);
+            setSubmitError("");
             setErrors(emptyErrors);
             setFormKey((value) => value + 1);
           }}
@@ -148,12 +174,21 @@ export function ContactForm() {
           </p>
         ) : null}
       </div>
-      <Button type="submit" className="h-12 w-full rounded-full px-6 text-base sm:w-auto">
-        שליחת פנייה
-      </Button>
-      <p className="text-sm leading-6 text-muted-foreground">
-        הטופס פועל בדפדפן בלבד. אין הרשמה ואין שמירה בשרת.
+      <p className="text-base leading-7 text-foreground/80">
+        הפנייה נשלחת בדוא״ל אל הסדנה.
       </p>
+      {submitError ? (
+        <p role="alert" className="text-sm text-destructive">
+          {submitError}
+        </p>
+      ) : null}
+      <Button
+        type="submit"
+        className="h-12 w-full rounded-full px-6 text-base sm:w-auto"
+        disabled={submitting}
+      >
+        {submitting ? "שולחים…" : "שליחת פנייה"}
+      </Button>
     </form>
   );
 }
