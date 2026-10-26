@@ -1,8 +1,8 @@
-# הסדנא החכמה
+# בשבילי הצחוק
 
-Hebrew, right-to-left marketing site for הסדנא החכמה, a small wisdom workshop for conversation, listening, and handwork. The page is a starting brand site: hero, about, offerings, how a visit works, and a contact form that stays in the browser.
+Hebrew, right-to-left site for בשבילי הצחוק: a stand-up workshop with emotional accompaniment for people in cancer rehabilitation, looking for pilot partners. The copy follows the pilot brief. The contact form stays in the browser.
 
-The wordmark uses the spelling הסדנא החכמה. The logo file is `public/workshop-logo.jpg`.
+The existing logo file is `public/workshop-logo.jpg`. It is not redrawn.
 
 ## Build the static site
 

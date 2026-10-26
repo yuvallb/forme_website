@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Frank_Ruhl_Libre, Heebo } from "next/font/google";
 import Script from "next/script";
 import { DirectionProvider } from "@/components/ui/direction";
-import { workshopName } from "@/lib/brand";
+import { ventureName } from "@/lib/brand";
 import "./globals.css";
 
 const heebo = Heebo({
@@ -18,9 +18,9 @@ const frank = Frank_Ruhl_Libre({
 });
 
 export const metadata: Metadata = {
-  title: workshopName,
+  title: ventureName,
   description:
-    "מפגשים קטנים לשיחה, הקשבה ויצירה. מקום שקט שבו חוכמה נעשית בידיים.",
+    "סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום. מיזם בשבילי הצחוק מחפש שותפים לפיילוט.",
   icons: { icon: "workshop-logo.jpg" },
 };
 

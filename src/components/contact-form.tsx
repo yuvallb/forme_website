@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { workshopName } from "@/lib/brand";
+import { ventureName } from "@/lib/brand";
 
 type FieldName = "name" | "email" | "message";
 
@@ -36,7 +36,7 @@ export function ContactForm() {
       nextErrors.email = "נא למלא כתובת דוא״ל תקינה.";
     }
     if (message.length < 8) {
-      nextErrors.message = "ספרו בכמה מילים מה תרצו במפגש.";
+      nextErrors.message = "ספרו בכמה מילים איך אפשר לשתף פעולה.";
     }
 
     setErrors(nextErrors);
@@ -59,7 +59,7 @@ export function ContactForm() {
         <div className="space-y-2">
           <h3 className="text-2xl text-foreground">הפנייה נקלטה</h3>
           <p className="text-base leading-7 text-foreground/80">
-            תודה שכתבתם ל{workshopName}. הפרטים נשארו כאן במסך, בלי שליחה לשרת.
+            תודה שכתבתם ל{ventureName}. הפרטים נשארו כאן במסך, בלי שליחה לשרת.
             כשתחברו את הטופס לתיבת הדואר, המבקרים יראו את האישור הזה אחרי הפנייה.
           </p>
         </div>
@@ -131,12 +131,12 @@ export function ContactForm() {
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message">על המפגש</Label>
+        <Label htmlFor="message">איך אפשר לשתף פעולה</Label>
         <Textarea
           id="message"
           name="message"
           rows={5}
-          placeholder="למשל: ארבעה אנשים, מפגש של שיחה ויצירה, ביום חמישי אחר הצהריים."
+          placeholder="למשל: עמותה שמעוניינת לארח את מפגשי הפיילוט, או גוף אקדמי למחקר משותף."
           aria-invalid={errors.message ? true : undefined}
           aria-describedby={errors.message ? "message-error" : undefined}
           className="min-h-32 bg-card px-3 py-3 text-base"
