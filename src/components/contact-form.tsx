@@ -30,6 +30,7 @@ export function ContactForm() {
     const form = event.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
+    const organization = String(data.get("organization") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
     const nextErrors = { ...emptyErrors };
@@ -50,6 +51,7 @@ export function ContactForm() {
     }
 
     data.set("name", name);
+    data.set("organization", organization);
     data.set("email", email);
     data.set("message", message);
 
@@ -123,6 +125,15 @@ export function ContactForm() {
             {errors.name}
           </p>
         ) : null}
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="organization">ארגון (לא חובה)</Label>
+        <Input
+          id="organization"
+          name="organization"
+          autoComplete="organization"
+          className="h-11 bg-card px-3 text-base"
+        />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
