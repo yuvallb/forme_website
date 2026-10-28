@@ -12,6 +12,7 @@ const links = [
   { href: "#founders", label: "המייסדים" },
   { href: "#meetings", label: "המפגשים" },
   { href: "#partners", label: "שותפות" },
+  { href: "#register", label: "הרשמה" },
   { href: "#contact", label: "יצירת קשר" },
 ];
 

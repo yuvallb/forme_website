@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
+import { RegisterForm } from "@/components/register-form";
 import { SiteHeader } from "@/components/site-header";
 import {
   Card,
@@ -8,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
-import { foundersTestimony, ventureName } from "@/lib/brand";
+import { eldadTestimony, ventureName, yonatanTestimony } from "@/lib/brand";
 import { cn } from "cn";
 
 const facts = [
@@ -123,6 +124,12 @@ export default function Home() {
             </h1>
             <p className="mx-auto max-w-xl text-lg leading-8 text-foreground/85 md:mx-0">
               סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
+            </p>
+            <p className="mx-auto max-w-xl text-lg font-medium leading-8 text-primary md:mx-0">
+              ינואר 2027, פיילוט יוצא לדרך. יש למה לצפות...{" "}
+              <a href="#register" className="underline decoration-gold underline-offset-4">
+                להרשמה
+              </a>
             </p>
             <p className="mx-auto max-w-xl text-base leading-7 text-foreground/80 md:mx-0">
               הסדנה מעניקה כלים יצירתיים-נרטיביים בעלי אופי תרפויטי להתמודדות
@@ -251,8 +258,8 @@ export default function Home() {
         <section className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
           <div className="mx-auto max-w-6xl space-y-8">
             <h2 className="text-4xl text-primary">איך התחלנו</h2>
-            <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start lg:col-span-2">
+            <div className="grid gap-4">
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
                 <Image
                   src="lital-liberman-avital.jpg"
                   alt="ד״ר ליטל ליברמן אביטל"
@@ -283,21 +290,41 @@ export default function Home() {
                   </blockquote>
                 </div>
               </figure>
-              <figure className="rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm">
-                <figcaption className="mb-4 font-heading text-2xl text-primary">
-                  יונתן ביגן
-                </figcaption>
-                <blockquote className="text-base leading-7 text-foreground">
-                  {foundersTestimony}
-                </blockquote>
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+                <Image
+                  src="yonatan-bigan.jpg"
+                  alt="יונתן ביגן"
+                  width={720}
+                  height={1600}
+                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-center sm:max-w-none"
+                />
+                <div className="space-y-4">
+                  <figcaption className="font-heading text-2xl text-primary">
+                    יונתן ביגן
+                  </figcaption>
+                  <blockquote className="space-y-4 text-base leading-7 text-foreground">
+                    {yonatanTestimony.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </blockquote>
+                </div>
               </figure>
-              <figure className="rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm">
-                <figcaption className="mb-4 font-heading text-2xl text-primary">
-                  אלדד שטרית
-                </figcaption>
-                <p className="text-base leading-7 text-foreground/55">
-                  העדות תתווסף כאן.
-                </p>
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+                <Image
+                  src="eldad-shitrit.jpg"
+                  alt="אלדד שטרית"
+                  width={915}
+                  height={1372}
+                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_22%] sm:max-w-none"
+                />
+                <div className="space-y-4">
+                  <figcaption className="font-heading text-2xl text-primary">
+                    אלדד שטרית
+                  </figcaption>
+                  <blockquote className="text-base leading-7 text-foreground">
+                    {eldadTestimony}
+                  </blockquote>
+                </div>
               </figure>
             </div>
           </div>
@@ -526,6 +553,19 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="register" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+          <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
+            <div className="space-y-4">
+              <p className="text-sm font-medium text-gold">הרשמה</p>
+              <h2 className="text-4xl text-primary">להצטרף לפיילוט</h2>
+              <p className="text-lg leading-8 text-foreground/80">
+                ינואר 2027, פיילוט יוצא לדרך. למי שרוצה להצטרף.
+              </p>
+            </div>
+            <RegisterForm />
+          </div>
+        </section>
+
         <section id="contact" className="scroll-mt-28 px-5 pb-20 sm:px-8 md:pb-28">
           <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
             <div className="space-y-4">
@@ -560,6 +600,9 @@ export default function Home() {
             </a>
             <a href="#partners" className="hover:text-primary">
               שותפות
+            </a>
+            <a href="#register" className="hover:text-primary">
+              הרשמה
             </a>
             <a href="#contact" className="hover:text-primary">
               יצירת קשר
