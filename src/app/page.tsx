@@ -269,7 +269,7 @@ export default function Home() {
                 />
                 <div className="space-y-4">
                   <figcaption className="font-heading text-2xl text-primary">
-                    ד״ר ליטל ליברמן אביטל
+                    ליטל ליברמן אביטל
                   </figcaption>
                   <blockquote className="space-y-4 text-base leading-7 text-foreground/85">
                     <p>
