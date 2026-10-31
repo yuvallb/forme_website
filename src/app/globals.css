@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-heebo), "Arial Hebrew", Arial, sans-serif;
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-frank), "Times New Roman", serif;
+  --font-heading: var(--font-heebo), "Arial Hebrew", Arial, sans-serif;
   --color-gold: var(--gold);
   --color-coral: var(--coral);
   --color-leaf: var(--leaf);
@@ -136,7 +136,7 @@
   h1,
   h2,
   h3 {
-    @apply font-heading text-balance;
+    @apply font-heading font-semibold text-balance;
   }
 }
 

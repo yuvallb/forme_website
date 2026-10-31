@@ -114,6 +114,11 @@ export default function Home() {
     <div id="top" className="flex min-h-full flex-col">
       <SiteHeader />
       <main id="content">
+        <div className="mx-auto max-w-6xl px-5 pt-8 sm:px-8 md:pt-12">
+          <p className="rounded-[2rem] border-2 border-primary/25 bg-card px-6 py-8 text-center text-3xl font-semibold leading-snug text-balance text-primary shadow-sm sm:px-10 sm:py-10 sm:text-4xl md:text-5xl">
+            סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
+          </p>
+        </div>
         <section className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-12 md:py-20">
           <div className="order-2 space-y-6 text-center md:order-1 md:text-start">
             <p className="text-sm font-medium tracking-wide text-primary">
@@ -122,9 +127,6 @@ export default function Home() {
             <h1 className="text-5xl leading-tight text-primary sm:text-6xl">
               {ventureName}
             </h1>
-            <p className="mx-auto max-w-xl text-lg leading-8 text-foreground/85 md:mx-0">
-              סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
-            </p>
             <p className="mx-auto max-w-xl text-lg font-medium leading-8 text-primary md:mx-0">
               ינואר 2027, פיילוט יוצא לדרך. יש למה לצפות...{" "}
               <a href="#register" className="underline decoration-gold underline-offset-4">
@@ -255,9 +257,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="founders" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
           <div className="mx-auto max-w-6xl space-y-8">
-            <h2 className="text-4xl text-primary">איך התחלנו</h2>
+            <div className="max-w-2xl space-y-3">
+              <p className="text-sm font-medium text-gold">מי אנחנו</p>
+              <h2 className="text-4xl text-primary">המייסדים</h2>
+            </div>
             <div className="grid gap-4">
               <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
                 <Image
@@ -268,9 +273,15 @@ export default function Home() {
                   className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_18%] sm:max-w-none"
                 />
                 <div className="space-y-4">
-                  <figcaption className="font-heading text-2xl text-primary">
+                  <figcaption className="font-heading text-2xl font-semibold text-primary">
                     ליטל ליברמן אביטל
                   </figcaption>
+                  <p className="text-sm text-foreground/70">מייסדת ומנהלת המיזם</p>
+                  <p className="text-base leading-7 text-foreground/80">
+                    חוקרת פולקלור (PhD), עם התמחות בסיפור האישי. אחות מוסמכת
+                    בעלת הכשרה על-בסיסית באונקולוגיה. עבדה כאחות אונקולוגית
+                    בסורוקה ובאיכילוב.
+                  </p>
                   <blockquote className="space-y-4 text-base leading-7 text-foreground/85">
                     <p>
                       כאחות אונקולוגית פגשתי מטופלים בשלבים שונים של ההתמודדות.
@@ -299,9 +310,17 @@ export default function Home() {
                   className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-center sm:max-w-none"
                 />
                 <div className="space-y-4">
-                  <figcaption className="font-heading text-2xl text-primary">
+                  <figcaption className="font-heading text-2xl font-semibold text-primary">
                     יונתן ביגן
                   </figcaption>
+                  <p className="text-sm text-foreground/70">
+                    מייסד שותף, עובד סוציאלי קליני ומטפל
+                  </p>
+                  <p className="text-base leading-7 text-foreground/80">
+                    מטפל בגישה פסיכודינמית בקליניקה פרטית. מוקסם מהדרכים
+                    הפתלתלות והיצירתיות שבהן הנפש משחקת במחבואים עם עצמה. מנסה
+                    לעזור לעצמו ולאחרים להרגיש אמיתיים יותר וסובלים פחות.
+                  </p>
                   <blockquote className="space-y-4 text-base leading-7 text-foreground">
                     {yonatanTestimony.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
@@ -318,50 +337,12 @@ export default function Home() {
                   className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_22%] sm:max-w-none"
                 />
                 <div className="space-y-4">
-                  <figcaption className="font-heading text-2xl text-primary">
+                  <figcaption className="font-heading text-2xl font-semibold text-primary">
                     אלדד שטרית
                   </figcaption>
-                  <blockquote className="text-base leading-7 text-foreground">
-                    {eldadTestimony}
-                  </blockquote>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        <section id="founders" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
-          <div className="mx-auto max-w-6xl space-y-8">
-            <div className="max-w-2xl space-y-3">
-              <p className="text-sm font-medium text-gold">מי אנחנו</p>
-              <h2 className="text-4xl text-primary">המייסדים</h2>
-            </div>
-            <div className="grid gap-4 lg:grid-cols-3">
-              <Card className="bg-card shadow-sm ring-border">
-                <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
-                    ד״ר ליטל ליברמן אביטל
-                  </CardTitle>
-                  <p className="text-sm text-foreground/70">מייסדת ומנהלת המיזם</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base leading-7 text-foreground/80">
-                    חוקרת פולקלור (PhD), עם התמחות בסיפור האישי. אחות מוסמכת
-                    בעלת הכשרה על-בסיסית באונקולוגיה. עבדה כאחות אונקולוגית
-                    בסורוקה ובאיכילוב.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card shadow-sm ring-border">
-                <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
-                    אלדד שטרית
-                  </CardTitle>
                   <p className="text-sm text-foreground/70">
                     מייסד שותף, סטנדאפיסט ומורה לסטנדאפ
                   </p>
-                </CardHeader>
-                <CardContent>
                   <p className="text-base leading-7 text-foreground/80">
                     לא ממש חי את החיים: הוא עומד לידם, מסתכל מהצד ורושם הערות.
                     מוצא הומור בדברים שכולנו מנסים להדחיק: משפחה, זוגיות,
@@ -369,25 +350,11 @@ export default function Home() {
                     בהם. בא מבית דתי, חזר בשאלה, והדבר היחיד שהוא לוקח ברצינות
                     הוא חוסר רצינות.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card shadow-sm ring-border">
-                <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
-                    עו״ס יונתן ביגן
-                  </CardTitle>
-                  <p className="text-sm text-foreground/70">
-                    מייסד שותף, עובד סוציאלי קליני ומטפל
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base leading-7 text-foreground/80">
-                    מטפל בגישה פסיכודינמית בקליניקה פרטית. מוקסם מהדרכים
-                    הפתלתלות והיצירתיות שבהן הנפש משחקת במחבואים עם עצמה. מנסה
-                    לעזור לעצמו ולאחרים להרגיש אמיתיים יותר וסובלים פחות.
-                  </p>
-                </CardContent>
-              </Card>
+                  <blockquote className="text-base leading-7 text-foreground">
+                    {eldadTestimony}
+                  </blockquote>
+                </div>
+              </figure>
             </div>
           </div>
         </section>
@@ -465,7 +432,7 @@ export default function Home() {
             <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {facts.map((fact) => (
                 <div key={fact.label} className="rounded-2xl border border-border bg-card p-5">
-                  <dt className="mb-2 font-heading text-xl text-primary">{fact.label}</dt>
+                  <dt className="mb-2 font-heading text-xl font-semibold text-primary">{fact.label}</dt>
                   <dd className="text-base leading-7 text-foreground/80">{fact.text}</dd>
                 </div>
               ))}
@@ -485,7 +452,7 @@ export default function Home() {
                   key={meeting.title}
                   className="grid gap-3 rounded-2xl border border-border bg-card/80 p-4 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5 sm:p-5"
                 >
-                  <span className="flex size-10 items-center justify-center rounded-full bg-secondary font-heading text-lg text-primary">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-secondary font-heading text-lg font-semibold text-primary">
                     {index + 1}
                   </span>
                   <div>
@@ -553,6 +520,7 @@ export default function Home() {
           </div>
         </section>
 
+        <div id="forms" className="scroll-mt-28">
         <section id="register" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
           <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
             <div className="space-y-4">
@@ -579,11 +547,12 @@ export default function Home() {
             <ContactForm />
           </div>
         </section>
+        </div>
       </main>
       <footer className="border-t border-border px-5 py-8 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-heading text-2xl text-primary">{ventureName}</p>
+            <p className="font-heading text-2xl font-semibold text-primary">{ventureName}</p>
             <p className="text-sm text-muted-foreground">
               סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
             </p>
