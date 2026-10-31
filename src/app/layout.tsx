@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Frank_Ruhl_Libre, Heebo } from "next/font/google";
+import { Heebo } from "next/font/google";
 import Script from "next/script";
 import { DirectionProvider } from "@/components/ui/direction";
 import { ventureName } from "@/lib/brand";
@@ -9,12 +9,6 @@ import "./globals.css";
 const heebo = Heebo({
   subsets: ["hebrew", "latin"],
   variable: "--font-heebo",
-});
-
-const frank = Frank_Ruhl_Libre({
-  subsets: ["hebrew", "latin"],
-  weight: ["500", "700"],
-  variable: "--font-frank",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +25,7 @@ export default function RootLayout({
     <html
       lang="he"
       dir="rtl"
-      className={`${heebo.variable} ${frank.variable} h-full antialiased`}
+      className={`${heebo.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <Script
