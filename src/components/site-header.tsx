@@ -4,12 +4,12 @@ import { ventureName } from "@/lib/brand";
 import { cn } from "cn";
 
 const links = [
-  { href: "#about", label: "הסדנה" },
+  { href: "#glance", label: "הסדנה" },
+  { href: "#faq", label: "שאלות" },
   { href: "#founders", label: "המייסדים" },
-  { href: "#meetings", label: "המפגשים" },
   { href: "#partners", label: "שותפות" },
   { href: "#register", label: "הרשמה" },
-  { href: "#contact", label: "יצירת קשר" },
+  { href: "#inquire", label: "יצירת קשר" },
 ];
 
 export function SiteHeader() {
