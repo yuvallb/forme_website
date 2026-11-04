@@ -591,7 +591,7 @@ export default function Home() {
           <div>
             <p className="font-heading text-2xl font-semibold text-primary">{ventureName}</p>
             <p className="text-sm text-muted-foreground">
-              סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
+              סדנת סטנדאפ בליווי רגשי למתמודדים אונקולוגיים בשלב השיקום.
             </p>
           </div>
           <nav aria-label="ניווט תחתון" className="flex flex-wrap gap-x-5 gap-y-2 text-sm">

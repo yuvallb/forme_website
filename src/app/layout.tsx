@@ -19,8 +19,7 @@ const shareDescription =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: ventureName,
-  description:
-    "סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום. מיזם בשבילי הצחוק מחפש שותפים לפיילוט.",
+  description: shareDescription,
   icons: {
     icon: [{ url: "icon.png", type: "image/png", sizes: "192x192" }],
     apple: [{ url: "apple-icon.png", sizes: "180x180" }],
