@@ -131,12 +131,39 @@
     @apply font-sans scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-base leading-relaxed text-foreground antialiased;
   }
   h1,
   h2,
   h3 {
     @apply font-heading font-semibold text-balance;
+  }
+  h2 {
+    @apply text-3xl leading-tight tracking-tight sm:text-4xl;
+  }
+  h3 {
+    @apply text-xl leading-snug sm:text-2xl;
+  }
+  main {
+    @apply text-foreground/90;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply font-heading text-3xl leading-tight tracking-tight text-primary sm:text-4xl;
+  }
+  .section-eyebrow {
+    @apply text-sm font-semibold tracking-wide text-gold;
+  }
+  .section-shell {
+    @apply scroll-mt-28 px-5 py-14 sm:px-8 md:py-20;
+  }
+  .surface-card {
+    @apply rounded-[2rem] border border-border/80 bg-card/90 shadow-sm ring-1 ring-black/[0.03];
+  }
+  .blockquote-accent {
+    @apply rounded-2xl border-s-4 border-gold bg-secondary/90 px-5 py-4 text-base leading-8 text-foreground/90 italic shadow-sm;
   }
 }
 

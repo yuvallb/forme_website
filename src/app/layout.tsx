@@ -25,9 +25,9 @@ export default function RootLayout({
     <html
       lang="he"
       dir="rtl"
-      className={`${heebo.variable} h-full antialiased`}
+      className={`${heebo.variable} h-full`}
     >
-      <body className="min-h-full">
+      <body className="min-h-full bg-background text-foreground">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2P2V41DZSX"
           strategy="afterInteractive"
