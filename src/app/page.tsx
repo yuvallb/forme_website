@@ -266,12 +266,12 @@ export default function Home() {
                   key={item.title}
                   className={cn("rounded-3xl p-5 shadow-sm", item.tone)}
                 >
-                  <h3 className="text-xl text-primary">{item.title}</h3>
-                  <p className="mt-2 text-base leading-7 text-foreground/85">
+                  <h3 className="text-2xl text-primary">{item.title}</h3>
+                  <p className="mt-2 text-lg leading-8 text-foreground/85">
                     {item.text}
                   </p>
                   {item.extra ? (
-                    <p className="mt-3 text-base leading-7 text-foreground/85">
+                    <p className="mt-3 text-lg leading-8 text-foreground/85">
                       {item.extra}
                     </p>
                   ) : null}
