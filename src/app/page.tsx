@@ -14,21 +14,20 @@ import { cn } from "cn";
 
 const glance = [
   {
-    title: "למי מיועד?",
+    title: "למי מיועדת?",
     tone: "bg-[#dceeee]",
-    text: "מטופלים שסיימו את שלב הטיפולים הפעיל, ונמצאים בשיקום, בהחלמה ובחזרה לשגרה.",
-    extra:
-      "שתתבצע שיחת התאמה לאחר הרשמה עם המנחה יונתן, עו״ס, לוודא שזה הזמן הנכון עבורך להיכנס לתהליך, כדי לשמור על חוויה בטוחה עבורך.",
+    text: "למטופלים שסיימו את שלב הטיפולים הפעיל, ונמצאים בתהליכי שיקום וחזרה לשגרה.",
+    extra: "נבצע שיחת התאמה לוודא שהמסגרת נכונה עבורכם",
   },
   {
-    title: "מפגשים",
+    title: "כמה מפגשים?",
     tone: "bg-[#f3e6cc]",
-    text: "11 מפגשים. במסגרת המפגשים המשתתפים יכתבו קטע סטנדאפ שמספר את סיפורם.",
+    text: "11 מפגשים שבמהלכם תכתבו קטע סטנדאפ שמספר את סיפורכם",
   },
   {
     title: "משך מפגש",
     tone: "bg-[#e5f0e4]",
-    text: "120 דק'.",
+    text: "שעתיים",
   },
   {
     title: "אופי המפגשים",
@@ -53,7 +52,7 @@ const glance = [
   {
     title: "עלות",
     tone: "bg-[#e7efe6]",
-    text: "עלות משתתף — פרטים בהרשמה.",
+    text: "עלות מסובסדת — פרטים בהרשמה.",
   },
 ];
 
@@ -183,9 +182,10 @@ export default function Home() {
             priority
             className="h-auto w-full max-w-xs sm:max-w-sm"
           />
-          <p className="mt-6 w-full rounded-2xl bg-secondary px-5 py-4 text-base leading-7 font-medium text-primary sm:text-lg">
-            סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
-          </p>
+          <div className="mt-6 w-full rounded-2xl bg-secondary px-5 py-4 text-base leading-7 font-medium text-primary sm:text-lg">
+            <p>סדנת סטנדאפ בליווי רגשי למתמודדים אונקולוגיים בשלב השיקום</p>
+            <p>הכוללת כתיבת קטע והופעה בפני משפחה וחברים</p>
+          </div>
           <div className="mt-4 w-full rounded-[2rem] border border-border bg-card px-6 py-8 shadow-sm">
             <p className="text-xl leading-8 font-semibold text-foreground sm:text-2xl">
               יוצאים לדרך ב-<span dir="ltr">5/1/27</span>,
@@ -236,29 +236,52 @@ export default function Home() {
               <p>וזה מה שעומד מאחורי &quot;בשבילי הצחוק&quot; על רגל אחת.</p>
             </div>
           </div>
-          <div className="mx-auto mt-8 max-w-6xl space-y-4 rounded-[2rem] border border-border bg-card/80 p-6 md:p-10">
-            <p className="text-lg leading-8 text-foreground">
-              הסטנדאפ הוא כלי יצירתי בעל פוטנציאל טיפולי:
-            </p>
-            <p className="text-lg leading-8 text-foreground">
-              כי בסטנדאפ מותר להגיד הכול. הוא יוצר מרחב ביטוי בטוח ומחבק שמפיג
-              בדידות ומאפשר למספר להשמיע את מה שהוא מבקש שישמעו. העמידה מול
-              הקהל מחזקת תחושות של בטחון עצמי, חוסן ושליטה על החיים. וכשהסטנדאפ
-              נלמד ונכתב בקבוצה נוצרת קהילת תמיכה.
-            </p>
-          </div>
-          <div className="mx-auto mt-8 max-w-3xl space-y-4 text-lg leading-8 text-foreground/85">
-            <p>
-              מיזם {ventureName} מציע סדנת סטנדאפ קבוצתית בליווי רגשי למתמודדי
-              סרטן בשלב השיקום. הסדנה מעניקה כלים יצירתיים-נרטיביים בעלי אופי
-              תרפויטי להתמודדות עם האבחנה ועם תהליך השיקום.
-            </p>
-            <p>
-              הסדנה נבנתה על ידי צוות רב-תחומי ותועבר במשותף על ידי סטנדאפיסט
-              ואיש מקצוע בתחום הנפש. במהלך 11 מפגשים ילמדו המשתתפים לכתוב את
-              סיפורם בכלים מעולם הסטנדאפ, ובסיום יציגו את הקטע שכתבו במופע
-              בפני משפחה וחברים.
-            </p>
+        </section>
+
+        <section id="why-standup" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+          <div className="mx-auto max-w-6xl space-y-8">
+            <h2 className="text-4xl text-primary">למה דווקא סטנדאפ?</h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              <Card className="bg-card shadow-sm ring-border">
+                <CardHeader>
+                  <CardTitle className="font-heading text-2xl text-primary">
+                    עיבוד וארגון מחדש
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-base leading-7 text-foreground/80">
+                    מרחב שמעצים סוכנות ושליטה, ואת תחושת הסובייקט כבעל מכלול
+                    חיים ותפקידים, ולא כאובייקט רפואי.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-card shadow-sm ring-border">
+                <CardHeader>
+                  <CardTitle className="font-heading text-2xl text-primary">
+                    הפחתת בדידות
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-base leading-7 text-foreground/80">
+                    לגיטימציה לדבר את הכואב והלא אסתטי בפתיחות וללא שיפוטיות,
+                    בקבוצה תומכת, באופן שהסטנדאפ מאפשר.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-card shadow-sm ring-border">
+                <CardHeader>
+                  <CardTitle className="font-heading text-2xl text-primary">
+                    חוסן ומשמעות
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-base leading-7 text-foreground/80">
+                    שיפור איכות חיים, והפחתת סממנים של סטרס, חרדה ודיכאון,
+                    באמצעות כלים מעולמות הנרטיב והסטנדאפ.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
@@ -341,53 +364,6 @@ export default function Home() {
                   <p className="mt-2 text-base leading-7 text-foreground/85">{item.a}</p>
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="why-standup" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
-          <div className="mx-auto max-w-6xl space-y-8">
-            <h2 className="text-4xl text-primary">למה דווקא סטנדאפ?</h2>
-            <div className="grid gap-4 md:grid-cols-3">
-              <Card className="bg-card shadow-sm ring-border">
-                <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
-                    עיבוד וארגון מחדש
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base leading-7 text-foreground/80">
-                    מרחב שמעצים סוכנות ושליטה, ואת תחושת הסובייקט כבעל מכלול
-                    חיים ותפקידים, ולא כאובייקט רפואי.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card shadow-sm ring-border">
-                <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
-                    הפחתת בדידות
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base leading-7 text-foreground/80">
-                    לגיטימציה לדבר את הכואב והלא אסתטי בפתיחות וללא שיפוטיות,
-                    בקבוצה תומכת, באופן שהסטנדאפ מאפשר.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card shadow-sm ring-border">
-                <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
-                    חוסן ומשמעות
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base leading-7 text-foreground/80">
-                    שיפור איכות חיים, והפחתת סממנים של סטרס, חרדה ודיכאון,
-                    באמצעות כלים מעולמות הנרטיב והסטנדאפ.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
