@@ -27,7 +27,7 @@ const glance = [
   {
     title: "משך מפגש",
     tone: "bg-[#e5f0e4]",
-    text: "120 דק'.",
+    text: "שעתיים",
   },
   {
     title: "אופי המפגשים",
