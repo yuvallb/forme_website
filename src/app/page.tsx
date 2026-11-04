@@ -217,55 +217,29 @@ export default function Home() {
         </section>
 
         <section id="why-me" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
-          <div className="mx-auto max-w-6xl space-y-12">
+          <div className="mx-auto max-w-3xl space-y-6">
             <h2 className="text-4xl text-primary">למה לי סטנדאפ בכלל?</h2>
-            <div className="space-y-8">
-              <div className="max-w-3xl space-y-3">
-                <h3 className="text-3xl text-primary">דוקטור דוקטור</h3>
-                <p className="text-lg leading-8 text-foreground/80">
-                  לפי דוח הוועדה הרב-מקצועית לתכנון מערך שירותי האונקולוגיה
-                  והרדיותרפיה בישראל, משרד הבריאות (יולי 2025), מדי שנה מאובחנים
-                  בישראל כ-30,000 חולי סרטן חדשים. בסוף 2021 חיו בישראל 98,813
-                  אנשים שאובחנו עם סרטן חודרני בחמש השנים שקדמו לכך. אחת מהמלצות
-                  הוועדה היא פיתוח שירותים לשלב שלאחר הטיפול הפעיל.
-                </p>
-              </div>
-              <div className="grid gap-4 md:grid-cols-3">
-                <Card className="bg-card shadow-sm ring-border">
-                  <CardContent className="pt-(--card-spacing)">
-                    <p className="text-base leading-7 text-foreground/80">
-                      בבתי חולים, בקופות חולים ובעמותות כבר נעשית עבודה חשובה,
-                      ובכלל זה מרפאות מחלימים. התחום עדיין זקוק להמשך פיתוח.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card shadow-sm ring-border">
-                  <CardContent className="pt-(--card-spacing)">
-                    <p className="text-base leading-7 text-foreground/80">
-                      אחרי השלב הפעיל, מטופלים רבים מוצאים מעטפת מצומצמת יותר, אף
-                      שהם עדיין זקוקים לתמיכה: תופעות לוואי, חזרה לשגרה, מעקבים
-                      תכופים, ובדידות.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card shadow-sm ring-border">
-                  <CardContent className="pt-(--card-spacing)">
-                    <p className="text-base leading-7 text-foreground/80">
-                      אנו רואים ב{ventureName} מענה בעל פוטנציאל לליווי ולסיוע
-                      בתהליכי השיקום.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-            <div className="max-w-3xl space-y-4">
-              <h3 className="text-3xl text-primary">בשבילי הצחוק על רגל אחת</h3>
-              <p className="text-lg leading-8 text-foreground/85">
+            <div className="space-y-4 text-lg leading-8 text-foreground/85">
+              <p>
+                &quot;דוקטור, דוקטור, מה יש לי?&quot; &quot;יש לי חדשות רעות וחדשות טובות...&quot;
+              </p>
+              <p>
+                יודעים איך הבדיחה מסתיימת? אספר לכם כשניפגש. מה שחשוב כרגע הוא
+                שאתם מכירים את הפתיח. יש אינספור גרסאות לבדיחת &quot;הדוקטור&quot;, כי היא
+                משקפת את הפחד האנושי מחולי וממוות. לצחוק על הפחד ועם הפחד, זה
+                כוח העל של הבדיחה. אבל לבדיחות יש כוח על נוסף, שהכי קל להרגיש
+                אותו כשמגיעים לקבוצה עם בדיחות פנימיות: תחושת זרות שקופצת על מי
+                שאינו חלק מהבדיחה. תחושה זו היא תוצר של הדבק הקבוצתי שבדיחות
+                יודעות לייצר. הבדיחות מצטיינות ביצירת קהילה, וקהילה היא דבר
+                שזקוקים לו במיוחד במציאות מאתגרת.
+              </p>
+              <p>וזה מה שעומד מאחורי &quot;בשבילי הצחוק&quot; על רגל אחת.</p>
+              <p>
                 מיזם {ventureName} מציע סדנת סטנדאפ קבוצתית בליווי רגשי למתמודדי
                 סרטן בשלב השיקום. הסדנה מעניקה כלים יצירתיים-נרטיביים בעלי אופי
                 תרפויטי להתמודדות עם האבחנה ועם תהליך השיקום.
               </p>
-              <p className="text-lg leading-8 text-foreground/85">
+              <p>
                 הסדנה נבנתה על ידי צוות רב-תחומי ותועבר במשותף על ידי סטנדאפיסט
                 ואיש מקצוע בתחום הנפש. במהלך 11 מפגשים ילמדו המשתתפים לכתוב את
                 סיפורם בכלים מעולם הסטנדאפ, ובסיום יציגו את הקטע שכתבו במופע
