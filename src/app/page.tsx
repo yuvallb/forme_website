@@ -183,9 +183,6 @@ export default function Home() {
             priority
             className="h-auto w-full max-w-xs sm:max-w-sm"
           />
-          <h1 className="mt-6 text-5xl leading-tight text-primary sm:text-6xl">
-            {ventureName}
-          </h1>
           <p className="mt-6 w-full rounded-2xl bg-secondary px-5 py-4 text-base leading-7 font-medium text-primary sm:text-lg">
             סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
           </p>
