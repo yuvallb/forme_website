@@ -201,7 +201,7 @@ export default function Home() {
           />
           <div className="mt-6 w-full rounded-2xl bg-secondary px-5 py-4 text-base leading-7 font-medium text-primary sm:text-lg">
             <p>סדנת סטנדאפ בליווי רגשי למתמודדים אונקולוגיים בשלב השיקום</p>
-            <p>הכוללת כתיבת קטע והופעה בפני משפחה וחברים</p>
+            <p>ובסופה מופע בפני משפחה וחברים.</p>
           </div>
           <div className="mt-4 w-full rounded-[2rem] border border-border bg-card px-6 py-8 shadow-sm">
             <p className="text-xl leading-8 font-semibold text-foreground sm:text-2xl">
