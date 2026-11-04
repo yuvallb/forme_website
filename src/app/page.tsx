@@ -193,24 +193,24 @@ export default function Home() {
             <p className="mt-1 text-xl leading-8 font-semibold text-foreground sm:text-2xl">
               ימי שלישי <span dir="ltr">19:00</span> בערב, בתל אביב.
             </p>
-            <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
+            <div className="mt-6 grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
               <a
                 href="#contact"
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "h-12 rounded-full px-6 text-base",
+                  "h-12 w-full rounded-full px-4 text-base",
                 )}
               >
-                שיתוף פעולה בפיילוט
+                שיתופי פעולה
               </a>
               <a
                 href="#register"
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "h-12 rounded-full px-6 text-base",
+                  "h-12 w-full rounded-full px-4 text-base",
                 )}
               >
-                הרשמה
+                הרשמה למשתתפים
               </a>
             </div>
           </div>
