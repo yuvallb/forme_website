@@ -11,11 +11,42 @@ const heebo = Heebo({
   variable: "--font-heebo",
 });
 
+const siteUrl = "https://thelaughterisfor.me";
+
+const shareDescription =
+  "סדנת סטנדאפ בליווי רגשי למתמודדים אונקולוגיים בשלב השיקום, ובסופה מופע בפני משפחה וחברים. יוצאים לדרך ב-5/1/27 בתל אביב.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: ventureName,
   description:
     "סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום. מיזם בשבילי הצחוק מחפש שותפים לפיילוט.",
-  icons: { icon: "workshop-logo.jpg" },
+  icons: {
+    icon: [{ url: "icon.png", type: "image/png", sizes: "192x192" }],
+    apple: [{ url: "apple-icon.png", sizes: "180x180" }],
+  },
+  openGraph: {
+    type: "website",
+    locale: "he_IL",
+    url: siteUrl,
+    siteName: ventureName,
+    title: `${ventureName} | סדנת סטנדאפ בליווי רגשי`,
+    description: shareDescription,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `הלוגו של ${ventureName}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${ventureName} | סדנת סטנדאפ בליווי רגשי`,
+    description: shareDescription,
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
