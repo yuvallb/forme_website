@@ -360,7 +360,107 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="meetings" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
+        <section id="founders" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
+          <div className="mx-auto max-w-6xl space-y-8">
+            <div className="max-w-2xl space-y-3">
+              <p className="text-sm font-medium text-gold">מי אנחנו</p>
+              <h2 className="text-4xl text-primary">המייסדים</h2>
+            </div>
+            <div className="grid gap-4">
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+                <Image
+                  src="lital-liberman-avital.jpg"
+                  alt="ד״ר ליטל ליברמן אביטל"
+                  width={1372}
+                  height={2048}
+                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_18%] sm:max-w-none"
+                />
+                <div className="space-y-4">
+                  <figcaption className="font-heading text-2xl font-semibold text-primary">
+                    ליטל ליברמן אביטל
+                  </figcaption>
+                  <p className="text-sm text-foreground/70">מייסדת ומנהלת המיזם</p>
+                  <p className="text-base leading-7 text-foreground/80">
+                    חוקרת פולקלור (PhD), עם התמחות בסיפור האישי. אחות מוסמכת
+                    בעלת הכשרה על-בסיסית באונקולוגיה. עבדה כאחות אונקולוגית
+                    בסורוקה ובאיכילוב.
+                  </p>
+                  <blockquote className="space-y-4 text-base leading-7 text-foreground/85">
+                    <p>
+                      כאחות אונקולוגית פגשתי מטופלים בשלבים שונים של ההתמודדות.
+                      בלטו החשש להכביד על המשפחה, והצורך לפגוש אנשים בהתמודדות
+                      דומה. יחד עם עו״ס מצוות בית החולים הקמתי קבוצת תמיכה
+                      למטופלים. היה צורך אמיתי במפגש, וגם קושי לשתף
+                      ולהיחשף לקשיים של אחרים.
+                    </p>
+                    <p>
+                      שנה לאחר מכן השתתפתי בקורס סטנדאפ. חברי הקבוצה כתבו וסיפרו
+                      סיפורים אישיים, מורכבים ולא פעם כואבים, והתגובה הייתה חיבוק,
+                      חום, צחוק וקבלה. שם התחברו הנקודות: מה אם נקיים קבוצת
+                      סטנדאפ למתמודדים אונקולוגיים? המודל לוקח את הטוב משני
+                      העולמות, הליווי הנפשי והסטנדאפ, בסדנה משולבת שמנחים מטפל
+                      רגשי וסטנדאפיסט.
+                    </p>
+                  </blockquote>
+                </div>
+              </figure>
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+                <Image
+                  src="yonatan-bigan.jpg"
+                  alt="יונתן ביגן"
+                  width={720}
+                  height={1600}
+                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-center sm:max-w-none"
+                />
+                <div className="space-y-4">
+                  <figcaption className="font-heading text-2xl font-semibold text-primary">
+                    יונתן ביגן
+                  </figcaption>
+                  <p className="text-sm text-foreground/70">
+                    מייסד שותף, עובד סוציאלי קליני ומטפל
+                  </p>
+                  <p className="text-base leading-7 text-foreground/80">
+                    מטפל בגישה פסיכודינמית בקליניקה פרטית. מוקסם מהדרכים
+                    הפתלתלות והיצירתיות שבהן הנפש משחקת במחבואים עם עצמה. מנסה
+                    לעזור לעצמו ולאחרים להרגיש אמיתיים יותר וסובלים פחות.
+                  </p>
+                  <blockquote className="rounded-2xl border-s-4 border-gold bg-secondary px-5 py-4 text-base leading-8 text-foreground italic">
+                    {yonatanTestimony}
+                  </blockquote>
+                </div>
+              </figure>
+              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+                <Image
+                  src="eldad-shitrit.jpg"
+                  alt="אלדד שטרית"
+                  width={915}
+                  height={1372}
+                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_22%] sm:max-w-none"
+                />
+                <div className="space-y-4">
+                  <figcaption className="font-heading text-2xl font-semibold text-primary">
+                    אלדד שטרית
+                  </figcaption>
+                  <p className="text-sm text-foreground/70">
+                    מייסד שותף, סטנדאפיסט ומורה לסטנדאפ
+                  </p>
+                  <p className="text-base leading-7 text-foreground/80">
+                    לא ממש חי את החיים: הוא עומד לידם, מסתכל מהצד ורושם הערות.
+                    מוצא הומור בדברים שכולנו מנסים להדחיק: משפחה, זוגיות,
+                    אלוהים, והתחושה שאתה לא בטוח אם אתה משתתף בחיים או רק צופה
+                    בהם. בא מבית דתי, חזר בשאלה, והדבר היחיד שהוא לוקח ברצינות
+                    הוא חוסר רצינות.
+                  </p>
+                  <blockquote className="rounded-2xl border-s-4 border-gold bg-secondary px-5 py-4 text-base leading-8 text-foreground italic">
+                    {eldadTestimony}
+                  </blockquote>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="meetings" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
           <div className="mx-auto max-w-6xl space-y-8">
             <h2 className="text-4xl text-primary">תכנית הסדנה</h2>
             <ol className="grid gap-3">
@@ -439,114 +539,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="founders" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
-          <div className="mx-auto max-w-6xl space-y-8">
-            <div className="max-w-2xl space-y-3">
-              <p className="text-sm font-medium text-gold">מי אנחנו</p>
-              <h2 className="text-4xl text-primary">המייסדים</h2>
-            </div>
-            <div className="grid gap-4">
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
-                <Image
-                  src="lital-liberman-avital.jpg"
-                  alt="ד״ר ליטל ליברמן אביטל"
-                  width={1372}
-                  height={2048}
-                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_18%] sm:max-w-none"
-                />
-                <div className="space-y-4">
-                  <figcaption className="font-heading text-2xl font-semibold text-primary">
-                    ליטל ליברמן אביטל
-                  </figcaption>
-                  <p className="text-sm text-foreground/70">מייסדת ומנהלת המיזם</p>
-                  <p className="text-base leading-7 text-foreground/80">
-                    חוקרת פולקלור (PhD), עם התמחות בסיפור האישי. אחות מוסמכת
-                    בעלת הכשרה על-בסיסית באונקולוגיה. עבדה כאחות אונקולוגית
-                    בסורוקה ובאיכילוב.
-                  </p>
-                  <blockquote className="space-y-4 text-base leading-7 text-foreground/85">
-                    <p>
-                      כאחות אונקולוגית פגשתי מטופלים בשלבים שונים של ההתמודדות.
-                      בלטו החשש להכביד על המשפחה, והצורך לפגוש אנשים בהתמודדות
-                      דומה. יחד עם עו״ס מצוות בית החולים הקמתי קבוצת תמיכה
-                      למטופלים. היה צורך אמיתי במפגש, וגם קושי לשתף
-                      ולהיחשף לקשיים של אחרים.
-                    </p>
-                    <p>
-                      שנה לאחר מכן השתתפתי בקורס סטנדאפ. חברי הקבוצה כתבו וסיפרו
-                      סיפורים אישיים, מורכבים ולא פעם כואבים, והתגובה הייתה חיבוק,
-                      חום, צחוק וקבלה. שם התחברו הנקודות: מה אם נקיים קבוצת
-                      סטנדאפ למתמודדים אונקולוגיים? המודל לוקח את הטוב משני
-                      העולמות, הליווי הנפשי והסטנדאפ, בסדנה משולבת שמנחים מטפל
-                      רגשי וסטנדאפיסט.
-                    </p>
-                  </blockquote>
-                </div>
-              </figure>
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
-                <Image
-                  src="yonatan-bigan.jpg"
-                  alt="יונתן ביגן"
-                  width={720}
-                  height={1600}
-                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-center sm:max-w-none"
-                />
-                <div className="space-y-4">
-                  <figcaption className="font-heading text-2xl font-semibold text-primary">
-                    יונתן ביגן
-                  </figcaption>
-                  <p className="text-sm text-foreground/70">
-                    מייסד שותף, עובד סוציאלי קליני ומטפל
-                  </p>
-                  <p className="text-base leading-7 text-foreground/80">
-                    מטפל בגישה פסיכודינמית בקליניקה פרטית. מוקסם מהדרכים
-                    הפתלתלות והיצירתיות שבהן הנפש משחקת במחבואים עם עצמה. מנסה
-                    לעזור לעצמו ולאחרים להרגיש אמיתיים יותר וסובלים פחות.
-                  </p>
-                  <blockquote className="space-y-4 text-base leading-7 text-foreground">
-                    {yonatanTestimony.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </blockquote>
-                </div>
-              </figure>
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
-                <Image
-                  src="eldad-shitrit.jpg"
-                  alt="אלדד שטרית"
-                  width={915}
-                  height={1372}
-                  className="mx-auto aspect-[3/4] h-auto w-full max-w-56 rounded-2xl object-cover object-[center_22%] sm:max-w-none"
-                />
-                <div className="space-y-4">
-                  <figcaption className="font-heading text-2xl font-semibold text-primary">
-                    אלדד שטרית
-                  </figcaption>
-                  <p className="text-sm text-foreground/70">
-                    מייסד שותף, סטנדאפיסט ומורה לסטנדאפ
-                  </p>
-                  <p className="text-base leading-7 text-foreground/80">
-                    לא ממש חי את החיים: הוא עומד לידם, מסתכל מהצד ורושם הערות.
-                    מוצא הומור בדברים שכולנו מנסים להדחיק: משפחה, זוגיות,
-                    אלוהים, והתחושה שאתה לא בטוח אם אתה משתתף בחיים או רק צופה
-                    בהם. בא מבית דתי, חזר בשאלה, והדבר היחיד שהוא לוקח ברצינות
-                    הוא חוסר רצינות.
-                  </p>
-                  <blockquote className="text-base leading-7 text-foreground">
-                    {eldadTestimony}
-                  </blockquote>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </section>
-
         <div id="forms" className="scroll-mt-28">
           <section id="register" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
             <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
               <div className="space-y-4">
-                <p className="text-sm font-medium text-gold">הרשמה</p>
-                <h2 className="text-4xl text-primary">להצטרף לפיילוט</h2>
+                <h2 className="text-4xl text-primary">הרשמת משתתפים</h2>
                 <p className="text-lg leading-8 text-foreground/80">
                   יוצאים לדרך ב-<span dir="ltr">5/1/27</span>, ימי שלישי בערב, בתל אביב.
                 </p>
