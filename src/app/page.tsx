@@ -171,6 +171,10 @@ const tracks = [
     title: "אירוח",
     text: "מקום למפגשי הסדנה, או במה למופע הסיום.",
   },
+  {
+    title: "אמץ משתתף",
+    text: "מימון עלות משתתף בודד - 5,000 ₪",
+  },
 ];
 
 const partnerGains = [
@@ -405,7 +409,7 @@ export default function Home() {
                 למשתתפים מוזמנות למצוא יחד איתנו את מסלול השותפות המתאים לכם.
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {tracks.map((track) => (
                 <Card key={track.title} className="bg-card shadow-sm ring-border">
                   <CardHeader>
