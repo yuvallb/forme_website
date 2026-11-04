@@ -555,8 +555,7 @@ export default function Home() {
           <section id="contact" className="scroll-mt-28 px-5 pb-8 sm:px-8">
             <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
               <div className="space-y-4">
-                <p className="text-sm font-medium text-gold">יצירת קשר</p>
-                <h2 className="text-4xl text-primary">נשמח לשבת יחד</h2>
+                <h2 className="text-4xl text-primary">לשיתופי פעולה</h2>
                 <p className="text-lg leading-8 text-foreground/80">
                   כתבו מי אתם, ואיזה מסלול שותפות מתאים לכם: מימון, עמותת חסות,
                   מחקר, הפצה או אירוח.
