@@ -190,7 +190,7 @@ export default function Home() {
     <div id="top" className="flex min-h-full flex-col">
       <SiteHeader />
       <main id="content">
-        <section className="mx-auto flex max-w-3xl flex-col items-center px-5 pt-8 pb-6 text-center sm:px-8 md:pt-12">
+        <section className="mx-auto flex max-w-3xl flex-col items-center px-5 pt-10 pb-8 text-center sm:px-8 md:pt-14 md:pb-10">
           <Image
             src="workshop-logo.jpg"
             alt={ventureName}
@@ -199,18 +199,18 @@ export default function Home() {
             priority
             className="h-auto w-full max-w-xs sm:max-w-sm"
           />
-          <div className="mt-6 w-full rounded-2xl bg-secondary px-5 py-4 text-base leading-7 font-medium text-primary sm:text-lg">
+          <div className="mt-7 w-full rounded-2xl bg-secondary/95 px-5 py-4 text-base leading-relaxed font-medium text-primary shadow-sm ring-1 ring-border/50 sm:px-6 sm:text-lg">
             <p>סדנת סטנדאפ בליווי רגשי למתמודדים אונקולוגיים בשלב השיקום</p>
             <p>ובסופה מופע בפני משפחה וחברים.</p>
           </div>
-          <div className="mt-4 w-full rounded-[2rem] border border-border bg-card px-6 py-8 shadow-sm">
-            <p className="text-xl leading-8 font-semibold text-foreground sm:text-2xl">
+          <div className="mt-5 w-full surface-card px-6 py-9 sm:px-8">
+            <p className="text-xl leading-snug font-semibold text-foreground sm:text-2xl sm:leading-8">
               יוצאים לדרך ב-<span dir="ltr">5/1/27</span>,
             </p>
-            <p className="mt-1 text-xl leading-8 font-semibold text-foreground sm:text-2xl">
+            <p className="mt-1 text-xl leading-snug font-semibold text-foreground sm:text-2xl sm:leading-8">
               ימי שלישי <span dir="ltr">19:00</span> בערב, בתל אביב.
             </p>
-            <div className="mt-6 grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="mt-7 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
               <a
                 href="#contact"
                 className={cn(
@@ -233,10 +233,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="why-me" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="why-me" className="section-shell">
           <div className="mx-auto max-w-3xl space-y-6">
-            <h2 className="text-4xl text-primary">למה לי סטנדאפ בכלל?</h2>
-            <div className="space-y-4 text-lg leading-8 text-foreground/85">
+            <h2 className="section-heading">למה לי סטנדאפ בכלל?</h2>
+            <div className="space-y-4 text-base leading-7 text-foreground/85 sm:text-lg sm:leading-8">
               <p>
                 &quot;דוקטור, דוקטור, מה יש לי?&quot; &quot;יש לי חדשות רעות וחדשות טובות...&quot;
               </p>
@@ -255,9 +255,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="why-standup" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="why-standup" className="section-shell">
           <div className="mx-auto max-w-3xl">
-            <Card className="bg-card shadow-sm ring-border">
+            <Card className="bg-card shadow-sm ring-1 ring-border/60 transition-shadow hover:shadow-md">
               <CardContent className="space-y-4 text-base leading-7 text-foreground/80">
                 <p>הסטנדאפ הוא כלי יצירתי בעל פוטנציאל טיפולי:</p>
                 <p>בסטנדאפ מותר להגיד הכול. הוא יוצר מרחב ביטוי בטוח ומחבק.</p>
@@ -270,21 +270,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="glance" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="glance" className="section-shell">
           <div className="mx-auto max-w-6xl space-y-8">
-            <h2 className="text-4xl text-primary">הסדנה שלנו במבט אחד</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <h2 className="section-heading">הסדנה שלנו במבט אחד</h2>
+            <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
               {glance.map((item) => (
                 <article
                   key={item.title}
-                  className={cn("rounded-3xl p-5 shadow-sm", item.tone)}
+                  className={cn(
+                    "rounded-3xl p-5 shadow-sm ring-1 ring-black/[0.04] sm:p-6",
+                    item.tone,
+                    item.tone === "bg-[#f4a15a]" &&
+                      "shadow-md ring-2 ring-primary/15",
+                  )}
                 >
-                  <h3 className="text-2xl text-primary">{item.title}</h3>
-                  <p className="mt-2 text-lg leading-8 text-foreground/85">
+                  <h3 className="font-heading text-primary">{item.title}</h3>
+                  <p className="mt-2 text-base leading-7 text-foreground/85 sm:text-lg sm:leading-8">
                     {item.text}
                   </p>
                   {item.extra ? (
-                    <p className="mt-3 text-lg leading-8 text-foreground/85">
+                    <p className="mt-3 text-base leading-7 text-foreground/85 sm:text-lg sm:leading-8">
                       {item.extra}
                     </p>
                   ) : null}
@@ -294,19 +299,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="model" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
+        <section id="model" className="section-shell bg-card/55">
           <div className="mx-auto max-w-6xl space-y-8">
             <div className="max-w-3xl space-y-3">
-              <h2 className="text-4xl text-primary">הסדנה שלנו - ממבט שני</h2>
+              <h2 className="section-heading">הסדנה שלנו - ממבט שני</h2>
               <p className="text-lg leading-8 text-foreground/85">
                 הסדנה נבנתה על ידי צוות רב-תחומי, ותועבר במשותף על ידי
                 סטנדאפיסט ואיש מקצוע בתחום הנפש. המודל משלב שני רבדים.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              <Card className="bg-card shadow-sm ring-border">
+              <Card className="bg-card shadow-sm ring-1 ring-border/60 transition-shadow hover:shadow-md">
                 <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
+                  <CardTitle className="font-heading text-primary">
                     עבודה אמנותית ופרפורמטיבית
                   </CardTitle>
                 </CardHeader>
@@ -318,9 +323,9 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-card shadow-sm ring-border">
+              <Card className="bg-card shadow-sm ring-1 ring-border/60 transition-shadow hover:shadow-md">
                 <CardHeader>
-                  <CardTitle className="font-heading text-2xl text-primary">
+                  <CardTitle className="font-heading text-primary">
                     ליווי רגשי
                   </CardTitle>
                 </CardHeader>
@@ -335,16 +340,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="faq" className="section-shell">
           <div className="mx-auto max-w-6xl space-y-8">
-            <h2 className="text-4xl text-primary">שאלות ותשובות</h2>
+            <h2 className="section-heading">שאלות ותשובות</h2>
             <div className="grid gap-4">
               {faqs.map((item) => (
                 <article
                   key={item.q}
-                  className="rounded-3xl border border-border bg-card p-6 shadow-sm"
+                  className="rounded-3xl border border-border/80 bg-card p-6 shadow-sm ring-1 ring-black/[0.03]"
                 >
-                  <h3 className="text-xl text-primary">{item.q}</h3>
+                  <h3 className="text-lg font-semibold text-primary sm:text-xl">{item.q}</h3>
                   <div className="mt-2 space-y-3 text-base leading-7 text-foreground/85">
                     {item.a.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
@@ -356,14 +361,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="founders" className="scroll-mt-28 bg-card/55 px-5 py-16 sm:px-8 md:py-24">
+        <section id="founders" className="section-shell bg-card/55">
           <div className="mx-auto max-w-6xl space-y-8">
             <div className="max-w-2xl space-y-3">
-              <p className="text-sm font-medium text-gold">מי אנחנו</p>
-              <h2 className="text-4xl text-primary">המייסדים</h2>
+              <p className="section-eyebrow">מי אנחנו</p>
+              <h2 className="section-heading">המייסדים</h2>
             </div>
             <div className="grid gap-4">
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+              <figure className="grid gap-5 surface-card p-6 sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start sm:p-7">
                 <Image
                   src="lital-liberman-avital.jpg"
                   alt="ד״ר ליטל ליברמן אביטל"
@@ -381,7 +386,7 @@ export default function Home() {
                     בעלת הכשרה על-בסיסית באונקולוגיה. עבדה כאחות אונקולוגית
                     בסורוקה ובאיכילוב.
                   </p>
-                  <blockquote className="space-y-4 text-base leading-7 text-foreground/85">
+                  <blockquote className="space-y-4 border-s-4 border-gold/50 ps-5 text-base leading-8 text-foreground/85">
                     <p>
                       כאחות אונקולוגית פגשתי מטופלים בשלבים שונים של ההתמודדות.
                       בלטו החשש להכביד על המשפחה, והצורך לפגוש אנשים בהתמודדות
@@ -398,7 +403,7 @@ export default function Home() {
                   </blockquote>
                 </div>
               </figure>
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+              <figure className="grid gap-5 surface-card p-6 sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start sm:p-7">
                 <Image
                   src="yonatan-bigan.jpg"
                   alt="יונתן ביגן"
@@ -418,12 +423,12 @@ export default function Home() {
                     הפתלתלות והיצירתיות שבהן הנפש משחקת במחבואים עם עצמה. מנסה
                     לעזור לעצמו ולאחרים להרגיש אמיתיים יותר וסובלים פחות.
                   </p>
-                  <blockquote className="rounded-2xl border-s-4 border-gold bg-secondary px-5 py-4 text-base leading-8 text-foreground italic">
+                  <blockquote className="blockquote-accent">
                     {yonatanTestimony}
                   </blockquote>
                 </div>
               </figure>
-              <figure className="grid gap-5 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start">
+              <figure className="grid gap-5 surface-card p-6 sm:grid-cols-[14rem_minmax(0,1fr)] sm:items-start sm:p-7">
                 <Image
                   src="eldad-shitrit.jpg"
                   alt="אלדד שטרית"
@@ -445,7 +450,7 @@ export default function Home() {
                     בהם. בא מבית דתי, חזר בשאלה, והדבר היחיד שהוא לוקח ברצינות
                     הוא חוסר רצינות.
                   </p>
-                  <blockquote className="rounded-2xl border-s-4 border-gold bg-secondary px-5 py-4 text-base leading-8 text-foreground italic">
+                  <blockquote className="blockquote-accent">
                     {eldadTestimony}
                   </blockquote>
                 </div>
@@ -454,20 +459,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="meetings" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="meetings" className="section-shell">
           <div className="mx-auto max-w-6xl space-y-8">
-            <h2 className="text-4xl text-primary">תכנית הסדנה</h2>
+            <h2 className="section-heading">תכנית הסדנה</h2>
             <ol className="grid gap-3">
               {meetings.map((meeting, index) => (
                 <li
                   key={meeting.title}
-                  className="grid gap-3 rounded-2xl border border-border bg-card/80 p-4 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5 sm:p-5"
+                  className="grid gap-3 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm ring-1 ring-black/[0.03] sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5 sm:p-5"
                 >
                   <span className="flex size-10 items-center justify-center rounded-full bg-secondary font-heading text-lg font-semibold text-primary">
                     {index + 1}
                   </span>
                   <div>
-                    <h3 className="text-xl text-primary">{meeting.title}</h3>
+                    <h3 className="font-semibold text-primary">{meeting.title}</h3>
                     <p className="text-base leading-7 text-foreground/80">{meeting.text}</p>
                   </div>
                 </li>
@@ -476,11 +481,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="scroll-mt-28 px-5 py-16 sm:px-8">
-          <div className="mx-auto max-w-6xl space-y-6 rounded-[2rem] border border-border bg-card/80 p-6 md:p-10">
+        <section className="section-shell md:py-16">
+          <div className="mx-auto max-w-6xl space-y-6 surface-card p-6 md:p-10">
             <div className="space-y-3">
-              <p className="text-sm font-medium text-gold">מרחב בטוח</p>
-              <h2 className="text-4xl text-primary">היבטים אתיים ובטיחותיים</h2>
+              <p className="section-eyebrow">מרחב בטוח</p>
+              <h2 className="section-heading">היבטים אתיים ובטיחותיים</h2>
             </div>
             <ul className="grid gap-3 md:grid-cols-2">
               {safety.map((item) => (
@@ -493,11 +498,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="partners" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
+        <section id="partners" className="section-shell">
           <div className="mx-auto max-w-6xl space-y-8">
             <div className="max-w-3xl space-y-3">
-              <p className="text-sm font-medium text-gold">שותפות</p>
-              <h2 className="text-4xl text-primary">איך אפשר לשתף פעולה</h2>
+              <p className="section-eyebrow">שותפות</p>
+              <h2 className="section-heading">איך אפשר לשתף פעולה</h2>
               <p className="text-lg leading-8 text-foreground/80">
                 עמותות וחברות המעוניינות לשתף איתנו פעולה על מנת להנגיש את הסדנא
                 למשתתפים מוזמנות למצוא יחד איתנו את מסלול השותפות המתאים לכם.
@@ -505,9 +510,9 @@ export default function Home() {
             </div>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {tracks.map((track) => (
-                <Card key={track.title} className="bg-card shadow-sm ring-border">
+                <Card key={track.title} className="bg-card shadow-sm ring-1 ring-border/60 transition-shadow hover:shadow-md">
                   <CardHeader>
-                    <CardTitle className="font-heading text-2xl text-primary">
+                    <CardTitle className="font-heading text-primary">
                       {track.title}
                     </CardTitle>
                   </CardHeader>
@@ -518,7 +523,7 @@ export default function Home() {
               ))}
             </div>
             <div className="space-y-3">
-              <h3 className="text-2xl text-primary">
+              <h3 className="font-heading text-primary">
                 השותפים שלנו יקבלו, לפי היקף השותפות
               </h3>
               <ul className="grid gap-3 md:grid-cols-2">
@@ -534,10 +539,10 @@ export default function Home() {
         </section>
 
         <div id="forms" className="scroll-mt-28">
-          <section id="register" className="scroll-mt-28 px-5 py-16 sm:px-8 md:py-24">
-            <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
+          <section id="register" className="section-shell">
+            <div className="mx-auto grid max-w-6xl gap-8 surface-card p-6 md:grid-cols-2 md:gap-10 md:p-10">
               <div className="space-y-4">
-                <h2 className="text-4xl text-primary">הרשמת משתתפים</h2>
+                <h2 className="section-heading">הרשמת משתתפים</h2>
                 <p className="text-lg leading-8 text-foreground/80">
                   יוצאים לדרך ב-<span dir="ltr">5/1/27</span>, ימי שלישי בערב, בתל אביב.
                 </p>
@@ -546,10 +551,10 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="scroll-mt-28 px-5 pb-8 sm:px-8">
-            <div className="mx-auto grid max-w-6xl gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-2 md:p-10">
+          <section id="contact" className="scroll-mt-28 px-5 pb-10 sm:px-8 md:pb-12">
+            <div className="mx-auto grid max-w-6xl gap-8 surface-card p-6 md:grid-cols-2 md:gap-10 md:p-10">
               <div className="space-y-4">
-                <h2 className="text-4xl text-primary">לשיתופי פעולה</h2>
+                <h2 className="section-heading">לשיתופי פעולה</h2>
                 <p className="text-lg leading-8 text-foreground/80">
                   כתבו מי אתם, ואיזה מסלול שותפות מתאים לכם: מימון, עמותת חסות,
                   מחקר, הפצה או אירוח.
@@ -560,9 +565,9 @@ export default function Home() {
           </section>
 
           <section id="inquire" className="scroll-mt-28 px-5 pt-8 pb-20 sm:px-8 md:pb-28">
-            <div className="mx-auto max-w-6xl space-y-4 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:p-10">
-              <p className="text-sm font-medium text-gold">בירורים</p>
-              <h2 className="text-4xl text-primary">יצירת קשר לבירורים ושאלות</h2>
+            <div className="mx-auto max-w-6xl space-y-4 surface-card p-6 md:p-10">
+              <p className="section-eyebrow">בירורים</p>
+              <h2 className="section-heading">יצירת קשר לבירורים ושאלות</h2>
               <p className="text-lg leading-8">
                 <a href="tel:052-5311791" dir="ltr" className="font-semibold text-primary underline decoration-gold underline-offset-4">
                   052-5311791
@@ -581,31 +586,31 @@ export default function Home() {
           </section>
         </div>
       </main>
-      <footer className="border-t border-border px-5 py-8 sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <footer className="border-t border-border/80 bg-muted/35 px-5 py-10 sm:px-8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-heading text-2xl font-semibold text-primary">{ventureName}</p>
             <p className="text-sm text-muted-foreground">
               סדנת סטנדאפ בליווי רגשי למתמודדי סרטן בשלב השיקום.
             </p>
           </div>
-          <nav aria-label="ניווט תחתון" className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-            <a href="#glance" className="hover:text-primary">
+          <nav aria-label="ניווט תחתון" className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            <a href="#glance" className="text-foreground/75 transition-colors hover:text-primary">
               הסדנה
             </a>
-            <a href="#faq" className="hover:text-primary">
+            <a href="#faq" className="text-foreground/75 transition-colors hover:text-primary">
               שאלות
             </a>
-            <a href="#founders" className="hover:text-primary">
+            <a href="#founders" className="text-foreground/75 transition-colors hover:text-primary">
               המייסדים
             </a>
-            <a href="#partners" className="hover:text-primary">
+            <a href="#partners" className="text-foreground/75 transition-colors hover:text-primary">
               שותפות
             </a>
-            <a href="#register" className="hover:text-primary">
+            <a href="#register" className="text-foreground/75 transition-colors hover:text-primary">
               הרשמה
             </a>
-            <a href="#inquire" className="hover:text-primary">
+            <a href="#inquire" className="text-foreground/75 transition-colors hover:text-primary">
               יצירת קשר
             </a>
           </nav>
