@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /index.txt
+Disallow: /_not-found
+Disallow: /404.html
+
+Host: https://thelaughterisfor.me
+Sitemap: https://thelaughterisfor.me/sitemap.xml
