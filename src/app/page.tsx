@@ -190,7 +190,7 @@ export default function Home() {
     <div id="top" className="flex min-h-full flex-col">
       <SiteHeader />
       <main id="content">
-        <section className="mx-auto flex max-w-3xl flex-col items-center px-5 pt-10 pb-8 text-center sm:px-8 md:pt-14 md:pb-10">
+        <section className="mx-auto flex max-w-3xl flex-col items-center px-5 pt-8 pb-6 text-center sm:px-8 md:pt-11 md:pb-8">
           <Image
             src="workshop-logo.jpg"
             alt={ventureName}
@@ -234,7 +234,7 @@ export default function Home() {
         </section>
 
         <section id="why-me" className="section-shell">
-          <div className="mx-auto max-w-3xl space-y-6">
+          <div className="mx-auto max-w-3xl space-y-5">
             <h2 className="section-heading">למה לי סטנדאפ בכלל?</h2>
             <div className="space-y-4 text-base leading-7 text-foreground/85 sm:text-lg sm:leading-8">
               <p>
@@ -271,7 +271,7 @@ export default function Home() {
         </section>
 
         <section id="glance" className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-8">
+          <div className="mx-auto max-w-6xl space-y-6">
             <h2 className="section-heading">הסדנה שלנו במבט אחד</h2>
             <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
               {glance.map((item) => (
@@ -300,7 +300,7 @@ export default function Home() {
         </section>
 
         <section id="model" className="section-shell bg-card/55">
-          <div className="mx-auto max-w-6xl space-y-8">
+          <div className="mx-auto max-w-6xl space-y-6">
             <div className="max-w-3xl space-y-3">
               <h2 className="section-heading">הסדנה שלנו - ממבט שני</h2>
               <p className="text-lg leading-8 text-foreground/85">
@@ -341,7 +341,7 @@ export default function Home() {
         </section>
 
         <section id="faq" className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-8">
+          <div className="mx-auto max-w-6xl space-y-6">
             <h2 className="section-heading">שאלות ותשובות</h2>
             <div className="grid gap-4">
               {faqs.map((item) => (
@@ -362,7 +362,7 @@ export default function Home() {
         </section>
 
         <section id="founders" className="section-shell bg-card/55">
-          <div className="mx-auto max-w-6xl space-y-8">
+          <div className="mx-auto max-w-6xl space-y-6">
             <div className="max-w-2xl space-y-3">
               <p className="section-eyebrow">מי אנחנו</p>
               <h2 className="section-heading">המייסדים</h2>
@@ -460,7 +460,7 @@ export default function Home() {
         </section>
 
         <section id="meetings" className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-8">
+          <div className="mx-auto max-w-6xl space-y-6">
             <h2 className="section-heading">תכנית הסדנה</h2>
             <ol className="grid gap-3">
               {meetings.map((meeting, index) => (
@@ -481,7 +481,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell md:py-16">
+        <section className="section-shell">
           <div className="mx-auto max-w-6xl space-y-6 surface-card p-6 md:p-10">
             <div className="space-y-3">
               <p className="section-eyebrow">מרחב בטוח</p>
@@ -499,7 +499,7 @@ export default function Home() {
         </section>
 
         <section id="partners" className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-8">
+          <div className="mx-auto max-w-6xl space-y-6">
             <div className="max-w-3xl space-y-3">
               <p className="section-eyebrow">שותפות</p>
               <h2 className="section-heading">איך אפשר לשתף פעולה</h2>
@@ -551,7 +551,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="scroll-mt-28 px-5 pb-10 sm:px-8 md:pb-12">
+          <section id="contact" className="scroll-mt-28 px-5 pb-6 sm:px-8 md:pb-8">
             <div className="mx-auto grid max-w-6xl gap-8 surface-card p-6 md:grid-cols-2 md:gap-10 md:p-10">
               <div className="space-y-4">
                 <h2 className="section-heading">לשיתופי פעולה</h2>
@@ -564,7 +564,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="inquire" className="scroll-mt-28 px-5 pt-8 pb-20 sm:px-8 md:pb-28">
+          <section id="inquire" className="scroll-mt-28 px-5 pt-6 pb-14 sm:px-8 md:pb-20">
             <div className="mx-auto max-w-6xl space-y-4 surface-card p-6 md:p-10">
               <p className="section-eyebrow">בירורים</p>
               <h2 className="section-heading">יצירת קשר לבירורים ושאלות</h2>
@@ -586,7 +586,7 @@ export default function Home() {
           </section>
         </div>
       </main>
-      <footer className="border-t border-border/80 bg-muted/35 px-5 py-10 sm:px-8">
+      <footer className="border-t border-border/80 bg-muted/35 px-5 py-8 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-heading text-2xl font-semibold text-primary">{ventureName}</p>
