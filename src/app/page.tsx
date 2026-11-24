@@ -340,85 +340,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="meetings" className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-6">
-            <h2 className="section-heading">תכנית הסדנה</h2>
-            <ol className="grid gap-3">
-              {meetings.map((meeting, index) => (
-                <li
-                  key={meeting.title}
-                  className="grid gap-3 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm ring-1 ring-black/[0.03] sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5 sm:p-5"
-                >
-                  <span className="flex size-10 items-center justify-center rounded-full bg-secondary font-heading text-lg font-semibold text-primary">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold text-primary">{meeting.title}</h3>
-                    <p className="text-base leading-7 text-foreground/80">{meeting.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-6 surface-card p-6 md:p-10">
-            <div className="space-y-3">
-              <p className="section-eyebrow">מרחב בטוח</p>
-              <h2 className="section-heading">היבטים אתיים ובטיחותיים</h2>
-            </div>
-            <ul className="grid gap-3 md:grid-cols-2">
-              {safety.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-base leading-7">
-                  <span className="mt-2 size-2 shrink-0 rounded-full bg-coral" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section id="partners" className="section-shell">
-          <div className="mx-auto max-w-6xl space-y-6">
-            <div className="max-w-3xl space-y-3">
-              <p className="section-eyebrow">שותפות</p>
-              <h2 className="section-heading">איך אפשר לשתף פעולה</h2>
-              <p className="text-lg leading-8 text-foreground/80">
-                עמותות וחברות המעוניינות לשתף איתנו פעולה על מנת להנגיש את הסדנה
-                למשתתפים מוזמנות למצוא יחד איתנו את מסלול השותפות המתאים לכם.
-              </p>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {tracks.map((track) => (
-                <Card key={track.title} className="bg-card shadow-sm ring-1 ring-border/60 transition-shadow hover:shadow-md">
-                  <CardHeader>
-                    <CardTitle className="font-heading text-primary">
-                      {track.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-base leading-7 text-foreground/80">{track.text}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="space-y-3">
-              <h3 className="font-heading text-primary">
-                השותפים שלנו יקבלו, לפי היקף השותפות
-              </h3>
-              <ul className="grid gap-3 md:grid-cols-2">
-                {partnerGains.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-base leading-7">
-                    <span className="mt-2 size-2 shrink-0 rounded-full bg-gold" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
         <section id="founders" className="section-shell bg-card/55">
           <div className="mx-auto max-w-6xl space-y-6">
             <div className="max-w-2xl space-y-3">
@@ -513,6 +434,85 @@ export default function Home() {
                   </blockquote>
                 </div>
               </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="meetings" className="section-shell">
+          <div className="mx-auto max-w-6xl space-y-6">
+            <h2 className="section-heading">תכנית הסדנה</h2>
+            <ol className="grid gap-3">
+              {meetings.map((meeting, index) => (
+                <li
+                  key={meeting.title}
+                  className="grid gap-3 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm ring-1 ring-black/[0.03] sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5 sm:p-5"
+                >
+                  <span className="flex size-10 items-center justify-center rounded-full bg-secondary font-heading text-lg font-semibold text-primary">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-primary">{meeting.title}</h3>
+                    <p className="text-base leading-7 text-foreground/80">{meeting.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className="section-shell">
+          <div className="mx-auto max-w-6xl space-y-6 surface-card p-6 md:p-10">
+            <div className="space-y-3">
+              <p className="section-eyebrow">מרחב בטוח</p>
+              <h2 className="section-heading">היבטים אתיים ובטיחותיים</h2>
+            </div>
+            <ul className="grid gap-3 md:grid-cols-2">
+              {safety.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-base leading-7">
+                  <span className="mt-2 size-2 shrink-0 rounded-full bg-coral" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section id="partners" className="section-shell">
+          <div className="mx-auto max-w-6xl space-y-6">
+            <div className="max-w-3xl space-y-3">
+              <p className="section-eyebrow">שותפות</p>
+              <h2 className="section-heading">איך אפשר לשתף פעולה</h2>
+              <p className="text-lg leading-8 text-foreground/80">
+                עמותות וחברות המעוניינות לשתף איתנו פעולה על מנת להנגיש את הסדנה
+                למשתתפים מוזמנות למצוא יחד איתנו את מסלול השותפות המתאים לכם.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {tracks.map((track) => (
+                <Card key={track.title} className="bg-card shadow-sm ring-1 ring-border/60 transition-shadow hover:shadow-md">
+                  <CardHeader>
+                    <CardTitle className="font-heading text-primary">
+                      {track.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-base leading-7 text-foreground/80">{track.text}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="space-y-3">
+              <h3 className="font-heading text-primary">
+                השותפים שלנו יקבלו, לפי היקף השותפות
+              </h3>
+              <ul className="grid gap-3 md:grid-cols-2">
+                {partnerGains.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-base leading-7">
+                    <span className="mt-2 size-2 shrink-0 rounded-full bg-gold" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
