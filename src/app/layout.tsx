@@ -4,6 +4,7 @@ import { Heebo } from "next/font/google";
 import Script from "next/script";
 import { DirectionProvider } from "@/components/ui/direction";
 import { ventureName } from "@/lib/brand";
+import { siteHomeUrl, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const heebo = Heebo({
@@ -11,13 +12,14 @@ const heebo = Heebo({
   variable: "--font-heebo",
 });
 
-const siteUrl = "https://thelaughterisfor.me";
-
 const shareDescription =
   "סדנת סטנדאפ בליווי רגשי למתמודדים אונקולוגיים בשלב השיקום, ובסופה מופע בפני משפחה וחברים. יוצאים לדרך ב-5/1/27 בתל אביב.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteHomeUrl,
+  },
   title: ventureName,
   description: shareDescription,
   icons: {
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "he_IL",
-    url: siteUrl,
+    url: siteHomeUrl,
     siteName: ventureName,
     title: `${ventureName} | סדנת סטנדאפ בליווי רגשי`,
     description: shareDescription,
